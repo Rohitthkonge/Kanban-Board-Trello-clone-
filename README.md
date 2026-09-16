@@ -35,8 +35,4 @@ kanban-board/
 - Modal dialog handling and form validation
 - Persisting structured data with `localStorage`
 
-## Live Demo
-_(add your GitHub Pages link here after deploying)_
 
-## License
-MIT
