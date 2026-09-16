@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kanban Board</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Kanban Board</h1>
+    <p class="subtitle">Drag cards between columns to update status</p>
+  </header>
+
+  <main class="board" id="board">
+    <div class="column" data-status="todo">
+      <div class="column-header">
+        <h2>To Do</h2>
+        <span class="count" id="count-todo">0</span>
+      </div>
+      <div class="card-list" id="list-todo"></div>
+      <button class="add-card-btn" data-status="todo">+ Add Card</button>
+    </div>
+
+    <div class="column" data-status="inprogress">
+      <div class="column-header">
+        <h2>In Progress</h2>
+        <span class="count" id="count-inprogress">0</span>
+      </div>
+      <div class="card-list" id="list-inprogress"></div>
+      <button class="add-card-btn" data-status="inprogress">+ Add Card</button>
+    </div>
+
+    <div class="column" data-status="done">
+      <div class="column-header">
+        <h2>Done</h2>
+        <span class="count" id="count-done">0</span>
+      </div>
+      <div class="card-list" id="list-done"></div>
+      <button class="add-card-btn" data-status="done">+ Add Card</button>
+    </div>
+  </main>
+
+  <!-- Modal for adding a card -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal">
+      <h3>Add New Card</h3>
+      <input type="text" id="cardTitleInput" placeholder="Card title" maxlength="80">
+      <textarea id="cardDescInput" placeholder="Description (optional)" rows="3"></textarea>
+      <div class="modal-actions">
+        <button id="cancelBtn" class="btn-secondary">Cancel</button>
+        <button id="saveBtn" class="btn-primary">Add Card</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
